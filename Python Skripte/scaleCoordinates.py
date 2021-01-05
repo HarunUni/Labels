@@ -1,3 +1,5 @@
+"""Scale the coordinates again to 4k after resized the video to FHD."""
+
 import sys
 import numpy as np
 

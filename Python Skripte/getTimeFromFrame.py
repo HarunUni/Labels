@@ -1,3 +1,5 @@
+"""Get time of video from frame number."""
+
 import sys
 
 

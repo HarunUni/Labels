@@ -1,3 +1,4 @@
+"""Writes the coordinates to a file."""
 import csv
 
 

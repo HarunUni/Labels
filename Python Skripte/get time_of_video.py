@@ -1,3 +1,5 @@
+"""Get the total duration of a video."""
+
 FPS = 29.97002997002997
 frame_count = 32785.0
 

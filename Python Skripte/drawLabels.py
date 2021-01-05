@@ -1,3 +1,8 @@
+"""Draw the labels in the video with vad and put audio in the background.
+
+The color of the labels will change according to the vad's. If there is speech, they will be green, otherwise red.
+"""
+
 import sys
 import cv2
 import moviepy.editor as mpy
@@ -29,8 +34,9 @@ def save_video(audio, destination, path_without_audio):
     print("Writing video with audio")
 
     video = mpy.VideoFileClip(path_without_audio)
-    video = video.set_audio(audio)
-    video.write_videofile(path_with_audio)
+    audioclip = mpy.AudioFileClip(audio)
+    video2 = video.set_audio(audioclip)
+    video2.write_videofile(path_with_audio)
 
 
 def open_video(video_source):

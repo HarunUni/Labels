@@ -1,3 +1,5 @@
+"""Export all the faces as video files."""
+
 import cv2
 import getFaces
 import sys

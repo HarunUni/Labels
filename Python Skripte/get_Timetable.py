@@ -1,3 +1,5 @@
+"""Get the timetable of a labels file."""
+
 import csv
 
 with open("inputs/Info.csv", "r", newline='') as file:

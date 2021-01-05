@@ -1,3 +1,5 @@
+"""Resize the resolution of the video to 1920x960."""
+
 import cv2
 import numpy as np
 import sys

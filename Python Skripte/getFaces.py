@@ -1,8 +1,11 @@
+"""Exports all the faces in a video file that are detected."""
+
 import cv2
 import numpy as np
 import sys
 from readCoordinates import read_coordinates
 from PIL import Image
+import os
 
 
 class Info:
@@ -44,8 +47,9 @@ def initialize(info_data, coordinates_data, destination, with_fillers, height, w
 
 
     # open the video file
+
     cap = cv2.VideoCapture(video_file)
-    if not cap.isOpened:
+    if not (cap.isOpened or os.path.exists(video_file)):
         print('--(!)Error opening video capture')
         exit(0)
 
@@ -166,7 +170,8 @@ def main(args):
     duration = int(args[4])
     height = 150
     width = 100
-    resolution = {'x': width * 16 * 6, 'y': height * 30}
+    resolution = {'x': width * 4 * 15, 'y': height * 30}    # width * (number_of_person + 1) * number_of_columns
+                                                            # height * number_of_rows
 
     info = initialize(info_file, coordinates_file, destination, with_fillers, height, width, resolution, duration)
 

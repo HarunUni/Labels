@@ -1,3 +1,7 @@
+"""Return the coordinates and the info file.
+
+This is a helper function."""
+
 import csv
 import sys
 
