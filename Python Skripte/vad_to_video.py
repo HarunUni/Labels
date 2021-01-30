@@ -38,6 +38,10 @@ def save_video(path_without_audio, audio_path):
 
 def main(args):
 
+    if len(args) != 4:
+        print("Usage: python3 vad_to_video.py <video_path> <vad_path> <audio_path> <output_path>")
+        sys.exit()
+
     video_path = args[0]
     vad_path = args[1]
     audio_path = args[2]
